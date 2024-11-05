@@ -1,6 +1,12 @@
 from bottle import get, post, run, request
 import sys
 
+def _stderr(*args):
+    try:
+        print(*args, file=sys.stderr)
+    except (IOError, AttributeError):
+        pass # Some environments do not allow printing (mod_wsgi)
+
 @get('/')
 def index():
     _stderr("/index")
