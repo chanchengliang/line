@@ -10,6 +10,4 @@ def index():
     print(request.body.getvalue().decode('utf-8'), file=sys.stdout)
     return request.body
 
-print (str(process.env.PORT))
-
 run(host='localhost', port=10000, debug=True)
