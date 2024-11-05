@@ -10,4 +10,4 @@ def index():
     print(request.body.getvalue().decode('utf-8'), file=sys.stdout)
     return request.body
 
-run(host='line-ac2x.onrender.com', port=80, debug=True)
+run(host='localhost', port=80, debug=True)
