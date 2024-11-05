@@ -1,5 +1,6 @@
 from bottle import get, post, run, request
 import sys
+import process
 
 @get('/')
 def index():
@@ -10,4 +11,6 @@ def index():
     print(request.body.getvalue().decode('utf-8'), file=sys.stdout)
     return request.body
 
-run(host='localhost', port=80, debug=True)
+print (str(process.env.PORT))
+
+run(host='localhost', port=10000 || 4000, debug=True)
