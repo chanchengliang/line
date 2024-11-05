@@ -13,4 +13,4 @@ def index():
 
 print (str(process.env.PORT))
 
-run(host='localhost', port=10000 || 4000, debug=True)
+run(host='localhost', port=10000, debug=True)
